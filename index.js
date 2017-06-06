@@ -34,11 +34,11 @@ function Album() {
 	};
 	this.listAllPhotos = function() {
 		for (var i = this.photos.length - 1; i >= 0; i--) {
-			console.log(this.photos[i]);
+			console.log(this.photos[i].name);
 		};
 	};
 	this.findPhoto = function(photo_location) {
-		return this.photos[photo_location];
+		return this.photos[photo_location - 1];
 	}
 }
 
