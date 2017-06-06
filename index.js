@@ -109,3 +109,31 @@ myAlbum.addPhoto(thirdPhoto);
  myLibrary.addBook(firstBook);
  myLibrary.addBook(secondBook);
  myLibrary.addBook(thirdBook);
+
+
+
+ /*
+  * ADVANCED:
+  *
+  * 1.
+  * Create a prototypical Person object. From this object, extend a Teacher object and a Student object. Each 
+  * of these objects should have attributes and methods pertinent to what they describe. Also create a School 
+  * object that should be able to store instances of students and teachers. Make sure to write code afterwards 
+  * that creates instances of these objects to make sure that what you've written works well and you're able to 
+  * store the necessary data in each object.
+  */
+
+function Person () {
+
+};
+
+function Teacher(argument) {
+	// body...
+}
+
+  /*
+   * 2.
+   * Give the school the ability to hire new teachers, and take on more students. This will be done with one 
+   * method of school, not two. This method will add teachers to the list of teachers, and students to the 
+   * list of students.
+   */
