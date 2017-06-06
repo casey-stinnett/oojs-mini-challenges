@@ -63,8 +63,49 @@ myAlbum.addPhoto(thirdPhoto);
  * that your objects and their methods work.
  */
 
- function Book(title, author, genre) {
+ function Book (title, author, genre) {
  	this.title = title;
  	this.author = author;
- 	
+ 	this.genre = genre;
  }
+
+ function Library() {
+ 	this.books = [];
+ 	var indexOfBook = "";
+
+ 	this.getBook = function (book_title) {
+ 		let book = this.books.filter(function (el) {
+ 			return (el.title === book_title);
+ 		});
+ 		return book[0];
+ 	}
+
+
+ 	this.getBookIndex = function (book_title) {
+ 		indexOfBook = this.books.indexOf(this.getBook(book_title));
+ 	}
+
+
+ 	this.addBook = function (book) {
+ 		this.books.push(book);
+ 	}
+
+
+ 	this.removeBook = function (book_title) {
+ 		this.getBookIndex(book_title);
+ 		this.books.splice(indexOfBook, 1);
+ 	}
+
+
+ 	this.countBooks = function () {
+ 		return this.books.length;
+ 	}
+ }
+
+ var firstBook = new Book ("Harry Potter", "J K Rowling", "Fantasy");
+ var secondBook = new Book ("Stormlight Archive", "Brandon Sanderson", "Fantasy");
+ var thirdBook = new Book ("The Fractal Geometry of Nature", "Benoit Mandlebrot", "Nonfiction");
+ var myLibrary = new Library;
+ myLibrary.addBook(firstBook);
+ myLibrary.addBook(secondBook);
+ myLibrary.addBook(thirdBook);
